@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
+
 import { Copy, Send } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -36,7 +36,7 @@ export default function Chat() {
     return () => {
       ws.close();
     };
-  }, []);
+  }, [messages, slug]);
 
   const copyRoomId = async () => {
     if (slug) {
